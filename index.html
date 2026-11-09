@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylo's Decor and Paintings | Wall Painting, Grafiato & Plasterboard Ceilings</title>
+  <meta name="description" content="Professional wall painting, grafiato finishes, wall treatments and plasterboard ceilings in Greater Accra, Ghana. Quality craftsmanship for homes and commercial spaces.">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#1a1a1a',
+            cream: '#f8f5f0',
+            gold: '#c9a86c',
+            'gold-light': '#e8d5a3',
+            warmgray: '#6b6560',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .gallery-item { overflow: hidden; }
+    .gallery-item img {
+      transition: transform 0.7s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55);
+    }
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: white;
+    }
+    
+    ::selection {
+      background-color: #c9a86c;
+      color: #1a1a1a;
+    }
+  </style>
+</head>
+<body class="bg-cream text-charcoal antialiased">
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/233245742788" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-md border-b border-charcoal/5">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="font-serif text-xl md:text-2xl tracking-wide text-charcoal">Stylo's</a>
+      
+      <div class="hidden md:flex items-center gap-8 text-sm tracking-wide">
+        <a href="#services" class="hover:text-gold transition-colors">Services</a>
+        <a href="#work" class="hover:text-gold transition-colors">Our Work</a>
+        <a href="#process" class="hover:text-gold transition-colors">Process</a>
+        <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+      </div>
+      
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-charcoal text-cream text-sm tracking-wide hover:bg-gold hover:text-charcoal transition-colors duration-300">
+        Get a Quote
+      </a>
+      
+      <button id="menu-btn" class="md:hidden p-2" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-charcoal/5">
+      <div class="px-6 py-4 flex flex-col gap-4 text-sm">
+        <a href="#services" class="py-2">Services</a>
+        <a href="#work" class="py-2">Our Work</a>
+        <a href="#process" class="py-2">Process</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="relative min-h-screen flex items-center pt-20">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1600&q=80" alt="Professional interior wall painting" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/70 to-charcoal/40"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <div class="max-w-2xl">
+        <p class="text-gold tracking-[0.25em] text-sm uppercase mb-6 fade-in">Professional Painting & Finishing</p>
+        <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-cream leading-[1.15] mb-6 fade-in">
+          Wall Painting, Grafiato<br>& Plasterboard Ceilings
+        </h1>
+        <p class="text-cream/85 text-lg md:text-xl leading-relaxed mb-10 max-w-lg fade-in">
+          High-quality wall treatments, textured finishes and ceiling work for homes and commercial spaces in Greater Accra.
+        </p>
+        <div class="flex flex-wrap gap-4 fade-in">
+          <a href="#contact" class="px-8 py-3.5 bg-gold text-charcoal font-medium tracking-wide hover:bg-gold-light transition-colors duration-300">
+            Request a Quote
+          </a>
+          <a href="https://wa.me/233245742788" target="_blank" rel="noopener" class="px-8 py-3.5 border border-cream/50 text-cream tracking-wide hover:bg-cream hover:text-charcoal transition-all duration-300 inline-flex items-center gap-2">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 md:py-32 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold tracking-[0.2em] text-sm uppercase mb-4">What We Do</p>
+        <h2 class="font-serif text-4xl md:text-5xl mb-4">Our Services</h2>
+        <p class="text-warmgray max-w-2xl mx-auto">Specialised in professional wall finishes and ceiling solutions for residential and commercial projects.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-8 md:p-10 bg-white border border-charcoal/5 hover:border-gold/30 transition-colors duration-300 fade-in">
+          <div class="w-12 h-12 mb-6 flex items-center justify-center border border-gold/50 text-gold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3">Wall & Structure Painting</h3>
+          <p class="text-warmgray leading-relaxed">Complete interior and exterior wall painting. Proper surface preparation, quality materials and clean, even finishes that last.</p>
+        </div>
+        
+        <div class="p-8 md:p-10 bg-white border border-charcoal/5 hover:border-gold/30 transition-colors duration-300 fade-in">
+          <div class="w-12 h-12 mb-6 flex items-center justify-center border border-gold/50 text-gold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3">Grafiato Painting</h3>
+          <p class="text-warmgray leading-relaxed">Textured grafiato finishes that add depth and character to walls. Available in a range of patterns and colours to suit modern and classic interiors.</p>
+        </div>
+        
+        <div class="p-8 md:p-10 bg-white border border-charcoal/5 hover:border-gold/30 transition-colors duration-300 fade-in">
+          <div class="w-12 h-12 mb-6 flex items-center justify-center border border-gold/50 text-gold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3">Wall Treatments</h3>
+          <p class="text-warmgray leading-relaxed">Surface preparation, repairs, sealing and specialised wall treatments. We fix cracks, uneven surfaces and prepare walls properly before finishing.</p>
+        </div>
+        
+        <div class="p-8 md:p-10 bg-white border border-charcoal/5 hover:border-gold/30 transition-colors duration-300 fade-in">
+          <div class="w-12 h-12 mb-6 flex items-center justify-center border border-gold/50 text-gold">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="font-serif text-2xl mb-3">Plasterboard Ceilings</h3>
+          <p class="text-warmgray leading-relaxed">Supply and installation of plasterboard (drywall) ceilings. Smooth, level finishes ready for paint, with attention to detail on joints and edges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Gallery -->
+  <section id="work" class="py-24 md:py-32 bg-charcoal text-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold tracking-[0.2em] text-sm uppercase mb-4">Projects</p>
+        <h2 class="font-serif text-4xl md:text-5xl">Our Work</h2>
+        <p class="text-cream/60 mt-4 max-w-xl mx-auto">Beautiful wall finishes, grafiato textures and plasterboard ceiling designs.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Wall Painting -->
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80" alt="Freshly painted interior walls" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Smooth Wall Finish</h3>
+            <p class="text-cream/50 text-sm">Interior house painting</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=800&q=80" alt="Modern living room walls" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Modern Living Room</h3>
+            <p class="text-cream/50 text-sm">Wall painting & finish</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80" alt="Elegant neutral wall tones" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Neutral Tones</h3>
+            <p class="text-cream/50 text-sm">Elegant house painting</p>
+          </div>
+        </div>
+        
+        <!-- Grafiato / Textured -->
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80" alt="Textured wall finish" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Grafiato Texture</h3>
+            <p class="text-cream/50 text-sm">Decorative wall finish</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=800&q=80" alt="Feature textured wall" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Feature Wall</h3>
+            <p class="text-cream/50 text-sm">Textured accent finish</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Luxury textured interior" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Luxury Wall Finish</h3>
+            <p class="text-cream/50 text-sm">High-end residential</p>
+          </div>
+        </div>
+        
+        <!-- Plasterboard Ceilings -->
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Modern plasterboard ceiling" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Plasterboard Ceiling</h3>
+            <p class="text-cream/50 text-sm">Clean modern design</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" alt="Ceiling with lighting detail" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Ceiling Detail</h3>
+            <p class="text-cream/50 text-sm">Plasterboard & lighting</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cd00?w=800&q=80" alt="Complete room walls and ceiling" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Complete Room</h3>
+            <p class="text-cream/50 text-sm">Walls + ceiling package</p>
+          </div>
+        </div>
+        
+        <!-- More interiors -->
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Commercial space painting" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Commercial Spaces</h3>
+            <p class="text-cream/50 text-sm">Structure painting</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80" alt="Bright modern interior walls" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Bright Interiors</h3>
+            <p class="text-cream/50 text-sm">Clean wall finishes</p>
+          </div>
+        </div>
+        
+        <div class="gallery-item fade-in">
+          <div class="aspect-[4/3] overflow-hidden bg-charcoal/20">
+            <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&q=80" alt="Stylish painted room" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="pt-4">
+            <h3 class="font-serif text-lg">Stylish Finish</h3>
+            <p class="text-cream/50 text-sm">Residential project</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <div class="text-center mt-14 fade-in">
+        <a href="https://wa.me/233245742788" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-8 py-3.5 bg-green-600 text-white tracking-wide hover:bg-green-500 transition-colors duration-300">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Ask about your project
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="py-24 md:py-32 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-gold tracking-[0.2em] text-sm uppercase mb-4">How It Works</p>
+        <h2 class="font-serif text-4xl md:text-5xl">Simple Process</h2>
+      </div>
+      
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center fade-in">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/50 flex items-center justify-center text-gold font-serif text-xl">1</div>
+          <h3 class="font-serif text-xl mb-2">Contact Us</h3>
+          <p class="text-warmgray text-sm leading-relaxed">Call, WhatsApp or send a message with details of your project.</p>
+        </div>
+        <div class="text-center fade-in">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/50 flex items-center justify-center text-gold font-serif text-xl">2</div>
+          <h3 class="font-serif text-xl mb-2">Site Visit / Quote</h3>
+          <p class="text-warmgray text-sm leading-relaxed">We assess the work and provide a clear, transparent quote.</p>
+        </div>
+        <div class="text-center fade-in">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/50 flex items-center justify-center text-gold font-serif text-xl">3</div>
+          <h3 class="font-serif text-xl mb-2">Work Begins</h3>
+          <p class="text-warmgray text-sm leading-relaxed">Proper preparation and professional application of finishes.</p>
+        </div>
+        <div class="text-center fade-in">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-full border border-gold/50 flex items-center justify-center text-gold font-serif text-xl">4</div>
+          <h3 class="font-serif text-xl mb-2">Final Handover</h3>
+          <p class="text-warmgray text-sm leading-relaxed">Clean site, quality check and completed project ready for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 md:py-32 bg-charcoal text-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16 items-start">
+        <div class="fade-in">
+          <p class="text-gold tracking-[0.2em] text-sm uppercase mb-4">Get in Touch</p>
+          <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight">Ready to start your project?</h2>
+          <p class="text-cream/70 leading-relaxed mb-10">Contact us for a free quote. We respond quickly on WhatsApp and phone.</p>
+          
+          <div class="space-y-8">
+            <div>
+              <p class="text-sm uppercase tracking-wider text-cream/40 mb-2">WhatsApp (Preferred)</p>
+              <a href="https://wa.me/233245742788" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-xl hover:text-gold transition-colors">
+                <svg class="w-7 h-7 text-green-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <span>+233 24 574 2788</span>
+              </a>
+            </div>
+            
+            <div>
+              <p class="text-sm uppercase tracking-wider text-cream/40 mb-2">Phone</p>
+              <a href="tel:+233245742788" class="text-xl hover:text-gold transition-colors">+233 24 574 2788</a>
+            </div>
+            
+            <div>
+              <p class="text-sm uppercase tracking-wider text-cream/40 mb-2">Email</p>
+              <a href="mailto:godwinwudah@gmail.com" class="text-xl hover:text-gold transition-colors">godwinwudah@gmail.com</a>
+            </div>
+            
+            <div>
+              <p class="text-sm uppercase tracking-wider text-cream/40 mb-2">Service Area</p>
+              <p class="text-xl">Greater Accra, Ghana</p>
+            </div>
+          </div>
+          
+          <div class="mt-12">
+            <a href="https://wa.me/233245742788" target="_blank" rel="noopener" class="inline-flex items-center gap-3 px-8 py-4 bg-green-600 text-white font-medium tracking-wide hover:bg-green-500 transition-colors duration-300">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+        
+        <div class="fade-in bg-cream text-charcoal p-8 md:p-10">
+          <h3 class="font-serif text-2xl mb-6">Send a Message</h3>
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-5">
+            <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+            
+            <div>
+              <label for="name" class="block text-sm tracking-wide mb-2">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white border border-charcoal/15 focus:border-gold outline-none transition-colors">
+            </div>
+            
+            <div>
+              <label for="phone" class="block text-sm tracking-wide mb-2">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-white border border-charcoal/15 focus:border-gold outline-none transition-colors">
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm tracking-wide mb-2">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-white border border-charcoal/15 focus:border-gold outline-none transition-colors">
+            </div>
+            
+            <div>
+              <label for="service" class="block text-sm tracking-wide mb-2">Service needed</label>
+              <select id="service" name="service" class="w-full px-4 py-3 bg-white border border-charcoal/15 focus:border-gold outline-none transition-colors">
+                <option value="wall-painting">Wall / Structure Painting</option>
+                <option value="grafiato">Grafiato Painting</option>
+                <option value="wall-treatment">Wall Treatment</option>
+                <option value="plasterboard">Plasterboard Ceilings</option>
+                <option value="other">Other / Multiple</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm tracking-wide mb-2">Project details</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-white border border-charcoal/15 focus:border-gold outline-none transition-colors resize-none" placeholder="Tell us about the rooms, size, or any specific requirements..."></textarea>
+            </div>
+            
+            <button type="submit" class="w-full py-4 bg-charcoal text-cream tracking-wide hover:bg-gold hover:text-charcoal transition-colors duration-300">
+              Request Quote
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-charcoal border-t border-cream/10 text-cream/50">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="font-serif text-lg text-cream">Stylo's Decor and Paintings</div>
+      <div class="flex gap-8 text-sm">
+        <a href="#services" class="hover:text-gold transition-colors">Services</a>
+        <a href="#work" class="hover:text-gold transition-colors">Our Work</a>
+        <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+      </div>
+      <p class="text-sm">© 2026 Stylo's Decor and Paintings</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
